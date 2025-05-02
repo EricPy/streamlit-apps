@@ -37,7 +37,7 @@ col3.metric(label="Total Interest", value=f"${total_interest:,.0f}")
 schedule = []
 remaining_balance = loan_amount
 
-for i in range(1, number_of_payments):
+for i in range(1, number_of_payments + 1):
     interest_payment = remaining_balance * monthly_interest_rate
     principal_payment = monthly_payment - interest_payment
     remaining_balance -= principal_payment
@@ -55,7 +55,7 @@ for i in range(1, number_of_payments):
 
 df = pd.DataFrame(
     schedule,
-    columns=["Month", "Payment", "Interest", "Remaining Balance", "Year"],
+    columns=["Month", "Payment", "Principal", "Interest", "Remaining Balance", "Year"],
 )
 
 st.write("### Payment Schedule")
