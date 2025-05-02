@@ -46,7 +46,7 @@ for i in range(1, number_of_payments + 1):
         [
             i,
             monthly_payment,
-            principal_payment
+            principal_payment,
             interest_payment,
             remaining_balance,
             year,
